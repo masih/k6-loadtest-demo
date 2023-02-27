@@ -1,0 +1,23 @@
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: simple
+spec:
+  parallelism: 4
+  runner:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: node.kubernetes.io/instance-type
+                  operator: In
+                  values:
+                    - m4.xlarge
+    resources:
+      limits:
+        cpu: "0.5"
+        memory: 1Gi
+      requests:
+        cpu: "0.5"
+        memory: 1Gi

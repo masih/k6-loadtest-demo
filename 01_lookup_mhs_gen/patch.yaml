@@ -1,0 +1,9 @@
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: simple
+spec:
+  parallelism: 7
+  arguments: '--out experimental-prometheus-rw --tag testId=lookup_mhs_gen'
+  runner:
+    image: '<published-image-url-goes-here>' # Add URL to the publicly accessible built image here.

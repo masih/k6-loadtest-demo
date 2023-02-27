@@ -1,0 +1,16 @@
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: lookup-mhs
+spec:
+  parallelism: 1
+  arguments: '--out experimental-prometheus-rw --tag testId=lookup_mhs'
+  runner:
+    env:
+      - name: K6_PROMETHEUS_RW_SERVER_URL
+        value: http://prometheus-k8s.monitoring.svc.cluster.local:9090/api/v1/write
+  cleanup: post
+  script:
+    configMap:
+      name: lookup-mhs
+      file: test.js
