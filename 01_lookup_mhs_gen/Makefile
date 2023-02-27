@@ -1,4 +1,4 @@
-# There is onthing special about this provider; it's just the first active one i came across.
+# There is nothing special about this provider; it's just the first active one i came across.
 PROVIDER_MADDR='/ip4/104.5.59.88/tcp/24001/p2p/12D3KooWRTsCNvyZr6zWvN2YtKuygfTyG5TqZfZ464472D4ZCqYd'
 OUT_FILE='mhs.txt'
 LATEST_AD_ENTRIES=$(shell provider ls ad -p $(PROVIDER_MADDR) -e | \

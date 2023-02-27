@@ -3,7 +3,7 @@
 This repository showcases running `k6` load tests on K8S cluster and have all metrics forwarded to a Prometheus server via Remote Write.
 
 The load tests are set up to work with IPNI `dev` environment as part of an internal team demo.
-However, you should be able to run them lon any K8S cluster given `k6-operator` is installed and Prometheus Remote Write endpoint is reachable.
+However, you should be able to run them on any K8S cluster given `k6-operator` is installed and Prometheus Remote Write endpoint is reachable.
 
 ## Prerequisites
 
@@ -45,4 +45,4 @@ Similarly, [`01_lookup_mhs_gen`](01_lookup_mhs_gen) extends [`01_lookup_mhs`](01
 
  - https://k6.io/blog/running-distributed-tests-on-k8s/
  - https://kubernetes.io/docs/concepts/overview/components/
- - [Installation of the K6 operator on IPNI `dev` cluster](https://github.com/ipni/storetheindex/pull/1290)
+ - [Installation of the K6 operator on IPNI `dev` cluster](https://github.com/ipni/storetheindex/pull/1329)

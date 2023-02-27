@@ -1,7 +1,7 @@
 apiVersion: k6.io/v1alpha1
 kind: K6
 metadata:
-  name: simple
+  name: lookup-mhs
 spec:
   parallelism: 7
   arguments: '--out experimental-prometheus-rw --tag testId=lookup_mhs_gen'

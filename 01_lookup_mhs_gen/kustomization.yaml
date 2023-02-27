@@ -4,5 +4,12 @@ kind: Kustomization
 resources:
   - ../01_lookup_mhs
 
+configMapGenerator:
+  - name: lookup-mhs
+    behavior: replace
+    files:
+      - test.js
+      - mhs.txt
+
 patchesStrategicMerge:
   - patch.yaml
